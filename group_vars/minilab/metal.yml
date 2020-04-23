@@ -52,11 +52,11 @@ metal_masterdata_api_port: 8445
 
 metal_masterdata_api_tenants:
 - meta:
-    id: fits
+    id: {{ metal_control_plane_provider_tenant }}
     kind: Tenant
     apiversion: v1
     version: 0
-  name: FI-TS
+  name: {{ metal_control_plane_provider_tenant }}
   iam_config:
     issuer_config:
       url: ""
@@ -65,7 +65,7 @@ metal_masterdata_api_tenants:
       idm_type: "UX"
     group_config:
       namespace_max_length: 20
-  description: FI-TS tenant, which is provider
+  description: Provider tenant
 metal_masterdata_api_projects:
 - meta:
     id: 00000000-0000-0000-0000-000000000001
