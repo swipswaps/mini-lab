@@ -21,7 +21,7 @@ This project can also be used as a template for writing your own metal-stack dep
 ## Requirements
 
 - Linux machine with hardware virtualization support
-- [Vagrant](https://www.vagrantup.com/) == 2.2.9 with vagrant-libvirt plugin >= 0.1.2 (for running the switch and machine VMs)
+- [Vagrant](https://www.vagrantup.com/) == 2.2.14 with vagrant-libvirt plugin >= 0.3.0 (for running the switch and machine VMs)
 - kvm as hypervisor for the VMs
   - Ubuntu 20.04:
 

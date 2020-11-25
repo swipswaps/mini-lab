@@ -10,6 +10,8 @@ METAL_STACK_RELEASE_VERSION=$(yq_shell "yq r inventories/group_vars/all/images.y
 RELEASE_YAML=$(curl -s https://raw.githubusercontent.com/metal-stack/releases/${METAL_STACK_RELEASE_VERSION}/release.yaml)
 METALCTL_IMAGE_TAG=$(yq_shell "echo \"${RELEASE_YAML}\" | yq r - docker-images.metal-stack.control-plane.metalctl.tag")
 DEPLOYMENT_BASE_IMAGE_TAG=$(yq_shell "echo \"${RELEASE_YAML}\" | yq r - docker-images.metal-stack.generic.deployment-base.tag")
+# FIXME: Remove next line when merged
+DEPLOYMENT_BASE_IMAGE_TAG=pr-split-images-vagrant
 
 cat << EOF > .env
 METALCTL_IMAGE_TAG=${METALCTL_IMAGE_TAG}
